@@ -1,0 +1,137 @@
+/* ======= link========== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ---------- common css -------- */
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+
+body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    background-color:#454342
+  }
+
+/* ----------input ---------- */
+.loop{
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+}
+.inner{
+  display: flex;
+  justify-content: center;
+
+}
+  .input {
+    outline-width: 1px;
+    outline-offset: 0;
+    outline-color: rgba(0, 130, 206, 0.75);
+    outline-style: solid;
+    animation: animateOutline 4s ease infinite;
+    margin-right: 30px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    background: #454342;
+    color: #FFF7F7;
+    border-radius: 10px;
+  }
+  
+@keyframes animateOutline {
+    0% {
+      outline-width: 1px;
+      outline-offset: 0;
+      outline-color: rgba(0, 130, 206, 0);
+    }
+  
+    10% {
+      outline-color: rgba(0, 130, 206, 0.75);
+    }
+  
+    /* The animation finishes at 50% */
+    50% {
+      outline-width: 7px;
+      outline-offset: 4px;
+      outline-color: rgba(0, 130, 206, 0);
+    }
+  
+    100% {
+      outline-width: 7px;
+      outline-offset: 4px;
+      outline-color: rgba(102, 102, 102, 0);
+    }
+  }
+  .error{
+
+    font-size: 16px;
+    font-weight: 500;
+    color: brown;
+    flex-direction: column;
+  }
+  .result{
+    margin-top: 15px;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFF7F7;
+  }
+ 
+  /* ------------ button --------- */
+
+  #neonShadow{
+    height:45px;
+    width:90px;
+    border:none;
+    border-radius:50px;
+    transition:0.3s;
+    background-color:rgba(156, 161, 160,0.3);
+    animation: glow 1s infinite ;
+    transition:0.5s;
+  }
+  span{
+      display: block;
+      width: 100%;
+      height: 100%;
+      font-weight: 700;
+      padding-top: 15%;
+      padding-right: 2.5%;
+      margin-right: 0px;
+      font-size: 1.2rem;
+      transition: 0.3s;
+      opacity: 0;
+      }
+  span:hover{
+      transition: 0.3s;
+      opacity: 1;
+      font-weight: 700;
+      }
+  
+  #neonShadow:hover{
+    transform:translateX(-20px)rotate(30deg);
+    border-radius:5px;
+    background-color:#c3bacc;
+    transition:0.5s;
+  }
+  
+  @keyframes glow{
+    0%{
+    box-shadow: 5px 5px 20px rgb(93, 52, 168),-5px -5px 20px rgb(93, 52, 168);}
+    
+    50%{
+    box-shadow: 5px 5px 20px rgb(81, 224, 210),-5px -5px 20px rgb(81, 224, 210)
+    }
+    100%{
+    box-shadow: 5px 5px 20px rgb(93, 52, 168),-5px -5px 20px rgb(93, 52, 168)
+    }
+  }
+  
+  
